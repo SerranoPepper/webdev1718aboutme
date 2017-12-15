@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+  background-color: MintCream ;
+  color: navy  ;
+} 
+p {outline-color:goldenrod;}
+.double {outline-style: double;}
+div {
+    padding: 10px;
+    border: 1px solid goldenrod;
+}
+</style>
+   <head>
+        <title>Movies in the Park</title>
+    </head>
+    <body>
+    <center><h1 class="fix">All Movies in the Park 2017</h1></center>
+    <p class="double">This website will load 311 movies in parks for Chicago that are rated PG. It will also show the park it was showing at.</p>
+    <button>Show Movies That Are Rated PG</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+                $(document).ready(function() {
+                $("button").click(function() {
+                    $.ajax({
+                        url:"https://data.cityofchicago.org/resource/cm53-g3up.json",
+                        success: function(result) {
+                            console.log(result);
+                                        $.getJSON(url)
+                .done (function (data) {
+                    
+                  console.log(data);
+
+                    
+                    $.each(data, function(index, value){
+                       var html = "<div><h1>" + value.title + "</h1>" +
+                                    "<p>Rating: " + value.rating + "<br>" +
+                                    "Park: " + value.park +
+                                    "</p>" +
+                                    "</div>";
+                                    
+                        $("body").append(html);
+                    });
+                })
+                        }
+                    });
+                });
+            });
+
+        var baseURL = 'https://data.cityofchicago.org/resource/cm53-g3up.json';
+        
+
+        var filters = '?rating=PG';
+        
+ 
+        var url = "https://data.cityofchicago.org/resource/cm53-g3up.json" + '?rating=PG';
+        
+        console.log (url);
+        
+        $(
+
+            
+
+            
+        );
+        
+        
+    </script>
+    </body>
+</html>
