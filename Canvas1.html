@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+<body>
+
+<canvas id="myCanvas" width="400" height="400" style="border:10px solid black;">
+
+</canvas>
+
+<script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+
+var grd = ctx.createRadialGradient(175,50,5,190,180,175);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"black");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 400, 400);
+        function initials() {
+            ctx.lineWidth = 12;
+            ctx.beginPath();
+                ctx.moveTo(225, 75);
+                ctx.lineTo(200, 75);
+            ctx.stroke();
+                ctx.moveTo(200, 75);
+                ctx.lineTo(200, 100);
+                ctx.moveTo(200,100);
+                ctx.lineTo(225,100);
+                ctx.moveTo(225,100,);
+                ctx.lineTo(225,125);
+                ctx.moveTo(225,125);
+                ctx.lineTo(200,125);
+            ctx.stroke();
+                ctx.moveTo(140, 75);
+                ctx.lineTo(140, 125);
+                ctx.moveTo(140, 75);
+                ctx.lineTo(175, 75);
+                ctx.moveTo(140, 100);
+                ctx.lineTo(175, 100);
+                ctx.moveTo(140, 125);
+                ctx.lineTo(175, 125);
+            ctx.stroke();
+        }
+        initials();
+
+window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("sp00k");
+   ctx.drawImage(img, 40, 200);
+};
+</script>
+<img id="sp00k" src="http://www.clker.com/cliparts/j/s/r/b/w/J/creepy-smile-md.png" alt="Smiley face" height="1" width="1">
+</body>
+</html>
