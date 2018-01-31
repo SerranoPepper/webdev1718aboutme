@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>sem1exam</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+body {
+    background-color: #039be5;
+}
+h1 {
+        background-color: #00bcd4;
+}
+h3 {
+        background-color: #00bcd4;
+}
+
+  </style>
+</head>
+    <body>
+<h1><u>Elijah Serrano</u></h1>
+<h3><i>Period:1</i></h3>
+
+<hr>
+<p>
+<img src="https://images.penguinrandomhouse.com/cover/9780451531353" alt="The Scarlet Letter" style="float:left;width:142px;height:184px;">
+A young woman, Hester Prynne, is led from the town prison with her infant daughter, Pearl, in her arms and the scarlet letter “A” on her breast. A man in the crowd tells an elderly onlooker that Hester is being punished for adultery and back in the puritan times adultery was a very bad crime.
+</p>
+<hr>
+<a href="https://preview.c9users.io/elijahcodesstuff/webdev1718aboutme/Bootstrap/aboutme2.html?_c9_id=livepreview2&_c9_host=https://ide.c9.io" target="_blank"><button>About Me!</button></a>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Jeff Kaplan</h2>
+      <p class="card-text">Jeffrey Kaplan is a video game designer who currently serves as vice president of Blizzard Entertainment. He is known for his work in designing elements of World of Warcraft and is the lead designer on Overwatch.</p>
+      <a href="https://en.wikipedia.org/wiki/Jeff_Kaplan" target="_blank" class="card-link">Wikipedia</a>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+
+    <div class="carousel-inner">
+
+      <div class="item active">
+        <img src="http://i1-news.softpedia-static.com/images/news2/microsoft-wanted-to-launch-an-xboy-handheld-but-canceled-it-because-of-xbox-360-506587-2.jpg" alt="Xbox 360" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Xbox 360</h3>
+          <p>The Xbox 360 is a home video game console developed by Microsoft. As the successor to the original Xbox, it is the second console in the Xbox series. It competed with Sony's PlayStation 3 and Nintendo's Wii as part of the seventh generation of video game consoles. It was officially unveiled on MTV on May 12, 2005, with detailed launch and game information announced later that month at the 2005 E3 expo.</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/4334/4334012_sd.jpg;maxHeight=640;maxWidth=550" alt="Xbox One" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Xbox One</h3>
+          <p>Xbox One is a line of eighth generation home video game consoles developed by Microsoft. Announced in May 2013, it is the successor to Xbox 360 and the third console in the Xbox family. It was first released in North America, parts of Europe, Australia, and Brazil in November 2013, and in Japan, China, and other European countries in September 2014. It is the first Xbox game console to be released in China, specifically in the Shanghai Free-Trade Zone. Microsoft marketed the device as an "all-in-one entertainment system".[13] The Xbox One line mainly competes against consoles such as Sony's PlayStation 4 and Nintendo's Wii U and Switch.</p>
+        </div>
+      </div>
+    
+      <div class="item">
+        <img src="https://cdn0.vox-cdn.com/uploads/chorus_asset/file/8667595/xboxonex.jpg" alt="Xbox One X" style="width:100%;">
+        <div class="carousel-caption">
+          <h3>Xbox One X</h3>
+          <p>During its E3 2017 press conference, Microsoft unveiled Xbox One X, a high-end version of Xbox One with upgraded hardware and a further-streamlined form factor. First teased at E3 2016 under the codename "Project Scorpio", Xbox One X was released on November 7, 2017, with a 1 TB model priced at US$499, and a limited, pre-order exclusive "Project Scorpio Edition", with a dark gradient finish, vertical stand brace and green "Project Scorpio" inscriptions on the console and bundled controller.</p>
+        </div>
+      </div>
+  
+    </div>
+
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<hr>
+    <button>Click Me</button>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $("button").click(function() {
+        $.ajax({
+            url:"https://data.cityofchicago.org/resource/tt4n-kn4t.json",
+            success: function(result) {
+                
+              console.log(result);
+              
+              $("body").append( 
+                "<table style='width:100%'><tr><th>Department</th> <th>Job Title</th><th>Salary</th><th>Part or Full Time</th></tr></table>"
+              );
+              for (var i=0; i<result.length;
+              i++){
+                $("body").append("<tr><td>" + result[i].department + "</td><td>" + result[i].job_titles + "</td><td>" + result[i].annual_salary + "</td><td>" + result[i].full_or_part_time + "</td></tr>")
+                }
+                
+              }
+              }
+              );
+        }
+        );
+        });
+    </script>
+    </body>
+</html>
