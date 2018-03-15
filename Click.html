@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <title>Teleporter Tap</title> 
+        <style>
+            canvas {
+                background-color: black;
+            }
+        </style>
+    </head> 
+    <body> 
+    <img id="seoul" width="1" height="1" src="https://owcdn.net/img/5a1e56578037e.png" alt="frog">
+        <canvas onclick="myFunction(event)" id="myCanvas" width="1200" height="800" style="border:10px solid gold;"></canvas>
+        <button onclick="location.reload()">Restart</button>
+        <script>
+            
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            var score=0;
+            var lives=3;
+            var varx=500;
+            var vary=500;
+            ctx.textAlign="center";
+            ctx.font="25px Arial";
+            ctx.fillStyle="gold";
+            ctx.fillText("Lives: "+lives, 60, 30);
+            ctx.fillText("Score: "+score, 1125, 30);
+            var img = document.getElementById("seoul");
+            ctx.drawImage(img, varx, vary);
+            
+            function myFunction(event){
+                var xpos=event.clientX;
+                var ypos=event.clientY;
+                if (xpos>=varx && xpos<=varx+190 && ypos>=vary && ypos<=vary+190){
+                    ctx.clearRect(0, 0, 1200, 1000);
+                    score++;
+                    ctx.fillText("Score: "+score, 1125, 30);
+                    ctx.fillText("Lives: "+lives, 60, 30);
+                    varx=Math.random()*800;
+                    vary=Math.random()*600;
+                    ctx.drawImage(img, varx, vary);
+                } else {
+                    ctx.clearRect(0, 0, 1200, 1000);
+                    lives--;
+                    ctx.fillText("Score: "+score, 1125, 30);
+                    ctx.fillText("Lives: "+lives, 60, 30);
+                    varx=Math.random()*450;
+                    vary=Math.random()*450;
+                    ctx.drawImage(img, varx, vary);
+                    if (lives==0){
+                        alert("You Eliminated Yourself");
+                        location.reload();
+                    }
+                }
+             if (score==35 && lives==3){
+                    alert("You are Literally on fire!");
+                    location.reload();
+                } else if (score==35){
+                    alert("#1 Victory Royale!");
+                    location.reload();
+                }
+                else if (score==5){
+                  alert("Not Even Close");
+                }
+                else if (score==10){
+                  alert("Just Stop Now");
+                }
+                else if (score==15){
+                  alert("What Is Your Goal Playing This Game?");
+                }
+                else if (score==20){
+                  alert("Give Up");
+                }
+                else if (score==25){
+                  alert("Give Me An A :)");
+                }
+                else if (score==30){
+                  alert("Stop");
+                }
+            }
+
+        </script>
+    </body> 
+</html>
